@@ -8,3 +8,17 @@
   - name: check variable
     ansible.builtin.debug:
       msg: "Hi, i am learning {{Course}}, Trainer is {{Trainer}}, Duration is {{Duration}}"
+
+
+
+
+- name: second variable
+  hosts: localhost
+  vars:
+    Name: "Anilkumar"
+    City: "A.P"
+    Village: "Daggubadu"
+  tasks:
+  - name: chech second variable
+    anisble.builtin.debug:
+      msg: "Hello i am {{Name}}, go to {{City}}, from village {{Village}}"
