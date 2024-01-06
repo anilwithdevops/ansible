@@ -20,5 +20,5 @@
     Village: "Daggubadu"
   tasks:
   - name: chech second variable
-    anisble.builtin.debug:
+    ansible.builtin.debug:
       msg: "Hello i am {{Name}}, go to {{City}}, from village {{Village}}"
