@@ -1,0 +1,12 @@
+- name: install and run git
+  hosts: web
+  become: yes
+  tasks:
+  - name: install git
+    ansible.builtin.package:
+      name: git
+      state: present
+  - name: run git
+    anisble.builtin.service:
+      name: git
+      state: started
