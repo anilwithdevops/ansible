@@ -22,3 +22,22 @@
   - name: chech second variable
     ansible.builtin.debug:
       msg: "Hello i am {{Name}}, go to {{City}}, from village {{Village}}"
+
+
+- name: variable from PLAY level
+  hosts: localhost
+  Course: "DevOps"
+  Trainer: "Anilkumar"
+  Duration: "10HRS"
+  tasks:
+  - name: check task level variable
+    vars: # task level variable
+      Course: "DevOps With AWS"
+    anisble.builtin.debug:
+      msg: "Hi, I am learing {{Course}}, Trainer is {{Trainer}}, Duration is {{Duration}}"
+
+
+
+  # Task level variable is override by Play level varible 
+  # This type of variable is running we will get output task level variable value
+
