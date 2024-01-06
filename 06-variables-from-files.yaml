@@ -6,5 +6,5 @@
   - name: check task level variable
     vars: # task level variable
       Course: "DevOps With AWS"
-    anisble.builtin.debug:
+    ansible.builtin.debug:
       msg: "Hi, I am learing {{Course}}, Trainer is {{Trainer}}, Duration is {{Duration}}"
