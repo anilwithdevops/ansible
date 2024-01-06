@@ -6,8 +6,8 @@
     yum:
       name: httpd
       state: latest
-  - name: running  services
-    services:
+  - name: running  service
+    service:
       name: httpd
       state: started
       enabled: yes
