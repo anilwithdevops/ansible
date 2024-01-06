@@ -1,0 +1,13 @@
+- name: install and run apachi service
+  hosts: web
+  become: yes
+  tasks:
+  - name: install httpd
+    yum:
+      name: httpd
+      state: latest
+  - name: run serivce
+    serivce:
+      name: httpd
+      state: started
+      enabled: yes
