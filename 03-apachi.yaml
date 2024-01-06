@@ -7,7 +7,7 @@
       name: httpd
       state: latest
   - name: running  serivces
-    systemctl:
+    serivces:
       name: httpd
       state: started
       enabled: yes
