@@ -2,7 +2,7 @@
   hosts: web
   become: yes
   tasks:
-  - name: install git
+  - name: install git package
     ansible.builtin.package:
       name: git
       state: present
