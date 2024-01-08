@@ -1,30 +1,64 @@
-- name: check data types
+# - name: check data types
+#   hosts: localhost
+#   become: yes
+#   vars:
+#     NAME: Anilkumar # Key pair
+#     Skills: #Skills is a list type
+#     - Devops
+#     - Shell
+#     - Ansible
+#     - Linux
+#     Experience: # Experience is map, it contain key value pairs
+#       DevOps: 7
+#       AWS: 4
+#       Docker: 3
+#     Trainer: True # Boolean
+#   tasks:
+#   - name: print pairs
+#     ansible.builtin.debug:
+#     msg: "name: {{NAME}}"
+#   - name: print list
+#     ansible.builtin.debug:
+#     msg: "Skills: {{Skills}}"
+#   - name: print map
+#     ansible.builtin.debug:
+#     msg: "Experience: {{Experience}}"
+#   - name: print Boolean
+#     ansible.builtin.debug:
+#     msg: "Trainer: {{Trainer}}"
+
+
+
+
+- name: checking data types
   hosts: localhost
-  become: yes
   vars:
-    NAME: Anilkumar # Key pair
+    NAME: Sivakumar # key value
     Skills: #Skills is a list type
-    - Devops
+    - DevOps
     - Shell
-    - Ansible
+    - ANsible
     - Linux
-    Experience: # Experience is map, it contain key value pairs
+    Experience: # Experience is map type. It contains key value pairs
       DevOps: 7
-      AWS: 4
-      Docker: 3
-    Trainer: True # Boolean
+      AWS: 6
+      Docker: 4
+    Trainer: true # boolean
   tasks:
-  - name: print pairs
+  - name: print key value pair
     ansible.builtin.debug:
-    msg: "name: {{NAME}}"
+      msg: "name: {{NAME}}"
+
   - name: print list
     ansible.builtin.debug:
-    msg: "Skills: {{Skills}}"
+      msg: "Skills: {{Skills}}"
+  
   - name: print map
     ansible.builtin.debug:
-    msg: "Experience: {{Experience}}"
-  - name: print Boolean
+      msg: "Experience: {{Experience}}"
+
+  - name: print boolean
     ansible.builtin.debug:
-    msg: "Trainer: {{Trainer}}"
+      msg: "is he Trainer: {{Trainer}}"
 
    
