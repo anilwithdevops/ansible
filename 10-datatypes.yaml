@@ -15,19 +15,19 @@
     Trainer: True # Boolean
   tasks:
   - name: print pairs
-    ansible.builtin.debug:
+    debug:
     msg: "name: {{NAME}}"
 
   - name: print list
-    ansible.builtin.debug:
+    debug:
     msg: "Skills: {{Skills}}"
 
   - name: print map
-    ansible.builtin.debug:
+    debug:
     msg: "Experience: {{Experience}}"
 
   - name: print Boolean
-    ansible.builtin.debug:
+    debug:
     msg: "Trainer: {{Trainer}}"
 
    
