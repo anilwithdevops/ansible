@@ -3,7 +3,7 @@
   become: yes
   vars:
     NAME: Anilkumar # Key pair
-    Skills:
+    Skills: #Skills is a list type
     - Devops
     - Shell
     - Ansible
@@ -15,19 +15,16 @@
     Trainer: True # Boolean
   tasks:
   - name: print pairs
-    debug:
+    ansible.builtin.debug:
     msg: "name: {{NAME}}"
-
   - name: print list
-    debug:
+    ansible.builtin.debug:
     msg: "Skills: {{Skills}}"
-
   - name: print map
-    debug:
+    ansible.builtin.debug:
     msg: "Experience: {{Experience}}"
-
   - name: print Boolean
-    debug:
+    ansible.builtin.debug:
     msg: "Trainer: {{Trainer}}"
 
    
