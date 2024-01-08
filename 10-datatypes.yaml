@@ -16,7 +16,7 @@
   tasks:
   - name: print pairs
     ansible.builtin.debug:
-    msg: "Name: {{NAME}}"
+    msg: "name: {{NAME}}"
 
   - name: print list
     ansible.builtin.debug:
