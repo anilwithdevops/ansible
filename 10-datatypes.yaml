@@ -3,23 +3,20 @@
   become: yes
   vars:
     NAME: Anilkumar # Key pair
-
     Skills:
     - Devops
     - Shell
     - Ansible
     - Linux
-
     Experience: # Experience is map, it contain key value pairs
       DevOps: 7
       AWS: 4
       Docker: 3
-
     Trainer: True # Boolean
   tasks:
   - name: print pairs
     ansible.builtin.debug:
-    msg: "NAME: {{NAME}}"
+    msg: "Name: {{NAME}}"
 
   - name: print list
     ansible.builtin.debug:
