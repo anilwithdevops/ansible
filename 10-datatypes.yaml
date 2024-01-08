@@ -1,5 +1,5 @@
 - name: check data types
-  host: localhost
+  hosts: localhost
   become: yes
   vars:
     NAME: Anilkumar # Key pair
