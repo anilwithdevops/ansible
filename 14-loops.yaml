@@ -5,7 +5,7 @@
   - name: install/uninstall packages
     ansible.builtin.package:
      name: "{{item.name}}"
-     state: "{{state.name}}"
+     state: "{{item.state}}"
     loop:
     - {name: 'git', state: 'present'}
     - {name: 'mysql', state: 'absent'}
