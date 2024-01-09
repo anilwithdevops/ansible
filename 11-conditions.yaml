@@ -1,21 +1,48 @@
-- name: conditions
+# - name: conditions
+#   hosts: localhost
+#   become: yes
+#   tasks:
+#   - name: check roboshop user exit or not
+#     ansible.builtin.command: id roboshop
+#     register: user # user is a variable
+#     ignore_errors: true #ansible will not exit even it got error
+
+#   - name: print variable value
+#     ansible.builtin.debug:
+#      msg: "user output is: {{user}}"
+
+#   - name: print exit status or retun code
+#     ansible.builtin.debug:
+#       msg: "status is: {{user.rc}}"
+
+#   - name: create user
+#     ansible.builtin.user:
+#      name: roboshop
+#     when: user.rc != 0 # condition
+
+
+- name: condition
   hosts: localhost
   become: yes
   tasks:
-  - name: check roboshop user exit or not
-    ansible.builtin.command: id roboshop
-    register: user # user is a variable
-    ignore_errors: true #ansible will not exit even it got error
+  - name: id salar
+    ansible.builtin.command:
+    register: output
+    ignore_errors: true
 
-  - name: print variable value
-    ansible.builtin.debug:
-     msg: "user output is: {{user}}"
 
-  - name: print exit status or retun code
+  - name: print value
     ansible.builtin.debug:
-      msg: "status is: {{user.rc}}"
+      msg: "user output is: {{output}}"
+
+  - name: check status 
+    ansible.builtin.debug:
+      msg: " status is: {{output.rc}}"
 
   - name: create user
     ansible.builtin.user:
-     name: roboshop
-    when: user.rc != 0 # condition
+     name: salar
+    when: output.rc: != o
+
+
+
