@@ -11,3 +11,19 @@
     - mysql
     - postfix
 
+
+
+- name: loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: uninstall packages
+    ansible.builtin.package:
+     name: "{{item}}"
+     state: absent
+    loop:
+    - git 
+    - mysql
+    - postfix
+
+
