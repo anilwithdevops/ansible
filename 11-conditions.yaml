@@ -42,7 +42,7 @@
   - name: create user
     ansible.builtin.user:
      name: salar
-    when: output.rc != o
+    when: output.rc != 0
 
 
 
