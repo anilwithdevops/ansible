@@ -15,7 +15,7 @@
   hosts: localhost
   tasks:
   - name: print items
-    anisbile.builtin.debug:
+    ansible.builtin.debug:
       msg: "print {{item}}"
     loop:
     - apple
