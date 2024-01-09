@@ -9,3 +9,26 @@
     - Anil 
     - naga 
     - hem
+
+
+- name: secons loop
+  hosts: localhost
+  tasks:
+  - name: print items
+    anisbile.builtin.debug:
+      msg: "print {{item}}"
+    loop:
+    - apple
+    - ball
+    - cat 
+    - bat
+
+
+
+
+
+
+
+
+
+
