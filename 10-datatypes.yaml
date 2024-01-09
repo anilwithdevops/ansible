@@ -1,31 +1,31 @@
-# - name: check data types
-#   hosts: localhost
-#   become: yes
-#   vars:
-#     NAME: Anilkumar # Key pair
-#     Skills: #Skills is a list type
-#     - Devops
-#     - Shell
-#     - Ansible
-#     - Linux
-#     Experience: # Experience is map, it contain key value pairs
-#       DevOps: 7
-#       AWS: 4
-#       Docker: 3
-#     Trainer: True # Boolean
-#   tasks:
-#   - name: print pairs
-#     ansible.builtin.debug:
-#     msg: "name: {{NAME}}"
-#   - name: print list
-#     ansible.builtin.debug:
-#     msg: "Skills: {{Skills}}"
-#   - name: print map
-#     ansible.builtin.debug:
-#     msg: "Experience: {{Experience}}"
-#   - name: print Boolean
-#     ansible.builtin.debug:
-#     msg: "Trainer: {{Trainer}}"
+- name: check data types
+  hosts: localhost
+  become: yes
+  vars:
+    NAME: Anilkumar # Key pair
+    Skills: #Skills is a list type
+    - Devops
+    - Shell
+    - Ansible
+    - Linux
+    Experience: # Experience is map, it contain key value pairs
+      DevOps: 7
+      AWS: 4
+      Docker: 3
+    Trainer: True # Boolean
+  tasks:
+  - name: print pairs
+    ansible.builtin.debug:
+    msg: "name: {{NAME}}"
+  - name: print list
+    ansible.builtin.debug:
+    msg: "Skills: {{Skills}}"
+  - name: print map
+    ansible.builtin.debug:
+    msg: "Experience: {{Experience}}"
+  - name: print Boolean
+    ansible.builtin.debug:
+    msg: "Trainer: {{Trainer}}"
 
 
 
