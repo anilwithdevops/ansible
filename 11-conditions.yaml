@@ -25,15 +25,15 @@
   hosts: localhost
   become: yes
   tasks:
-  - name: id salar
-    ansible.builtin.command:
+  - name: check salar
+    ansible.builtin.command: id salar
     register: output
     ignore_errors: true
 
 
   - name: print value
     ansible.builtin.debug:
-      msg: "user output is: {{output}}"
+      msg: "output is: {{output}}"
 
   - name: check status 
     ansible.builtin.debug:
